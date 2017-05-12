@@ -44,3 +44,11 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
+
+gem 'devise'
+
+gem 'twitter-bootstrap-rails'
+
+group :development do
+  gem 'letter_opener_web'
+end

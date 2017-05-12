@@ -1,5 +1,6 @@
 class PicsController < ApplicationController
  before_action :set_blog, only: [:edit, :update, :destroy]
+ before_action :authenticate_user!
 
   def index
     @pics = Pic.all
@@ -11,6 +12,7 @@ class PicsController < ApplicationController
 
   def create
     @pic = Pic.new(pics_params)
+    @pic.user_id = current_user.id
     if @pic.save
        redirect_to pics_path, notice:"投稿しました"
     else

@@ -1,10 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <%= form_for(@pic) do |f| %>
-
   <% if @pic.errors.any? %>
     <div id="error_explanation">
-
       <h2><%= @pic.errors.count %>件のエラーがあります。</h2>
 
       <ul>
@@ -17,12 +15,12 @@
 
 
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: 'form-control' %>
   <br>
   <%= f.label :content %>
-  <%= f.text_field :content %>
+  <%= f.text_field :content, class: 'form-control' %>
   <br>
-  <%= f.submit %>
+  <%= f.submit '投稿', class: 'btn btn-primary btn-block'%>
 <% end %>
 
 <%= link_to "一覧画面にもどる", pics_path %>
