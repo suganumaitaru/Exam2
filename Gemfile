@@ -48,6 +48,15 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 
 gem 'twitter-bootstrap-rails'
+gem 'rails_admin'
+gem 'cancan'
+gem 'pry-rails'
+gem 'better_errors'
+gem 'activeresource'
+gem 'dotenv-rails'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'letter_opener_web'
