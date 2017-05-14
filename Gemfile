@@ -57,6 +57,8 @@ gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development do
   gem 'letter_opener_web'
