@@ -1,5 +1,5 @@
 class PicsController < ApplicationController
- before_action :set_blog, only: [:edit, :update, :destroy]
+ before_action :set_pic, only: [:edit, :update, :destroy]
  before_action :authenticate_user!
 
   def index
@@ -39,7 +39,7 @@ class PicsController < ApplicationController
 
   private
     def pics_params
-      params.require(:pic).permit(:title,:content)
+      params.require(:pic).permit(:title,:content,:image)
     end
 
     def set_pic
